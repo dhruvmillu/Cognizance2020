@@ -1,0 +1,2 @@
+1.perfoming add command
+2. performig commit -a
