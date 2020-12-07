@@ -66,7 +66,7 @@
                 catch(Exception e){
                     System.out.println(e);}
                 ```
-                * but in this project it uses __mutiple try and catch statements__.
+     * but in this project it uses __mutiple try and catch statements__.
         ```java
         try {
             s = new Socket("127.0.0.1",1200);
