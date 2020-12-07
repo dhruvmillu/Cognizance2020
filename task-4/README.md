@@ -14,3 +14,54 @@
     * It uses __JAVA__ as a front end and __MySql__ as backend.
     * It communicates using _JAVA networking server and socket_.
         * usually server and socket are made on different classes. 
+            * for server: -
+            like this
+                 ```JAVA
+                import java.io.DataInputStream;
+                import java.io.DataOutputStream;
+                import java.net.ServerSocket;
+                .
+                .
+                .
+                try{
+                    ss=new ServerSocket(i);
+                    s=ss.accept();
+                    System.out.println("server on");
+                    din=new DataInputStream(s.getInputStream());
+                    dout=new DataOutputStream(s.getOutputStream());
+
+                    while(true){
+                        msgin=din.readUTF();
+                        jTextArea1.append(id2+": "+msgin+"\n");
+
+                        if(msgin.equals("exit")){
+                            ss.close();
+                         }
+                
+                    }
+
+                 }
+                catch(Exception o){System.out.print(o+"pp");
+                }
+                ```
+            * for client: -
+                ```JAVA
+                import java.io.DataInputStream;
+                import java.io.DataOutputStream;
+                import java.net.Socket;
+                .
+                .
+                .
+                try {
+                    s = new Socket("127.0.0.1",1200);
+                    din=new DataInputStream(s.getInputStream());
+                    dout=new DataOutputStream(s.getOutputStream());
+                    String msgin="";
+        
+                    while(!msgin.equals("exit")){
+                        msgin=din.readUTF();
+                        jTextArea1.append(id2+": "+msgin+"\n");
+                    }
+                 }
+                catch(Exception e){
+                    System.out.println(e);}
