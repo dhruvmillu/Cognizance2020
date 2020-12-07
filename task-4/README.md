@@ -14,8 +14,7 @@
     * It uses __JAVA__ as a front end and __MySql__ as backend.
     * It communicates using _JAVA networking server and socket_.
         * usually server and socket are made on different classes. 
-            * for server: -
-            like this
+            * for server: -like this
                  ```JAVA
                 import java.io.DataInputStream;
                 import java.io.DataOutputStream;
@@ -44,7 +43,8 @@
                 catch(Exception o){System.out.print(o+"pp");
                 }
                 ```
-         * for client: -
+            * for client:- like this
+                
                 ```JAVA
                 import java.io.DataInputStream;
                 import java.io.DataOutputStream;
@@ -66,7 +66,8 @@
                 catch(Exception e){
                     System.out.println(e);}
                 ```
-     * but in this project it uses __mutiple try and catch statements__.
+                
+         * but in this project it uses __mutiple try and catch statements__.
         ```java
         try {
             s = new Socket("127.0.0.1",1200);
@@ -132,3 +133,4 @@
             else{System.out.println(e+"kk");}
         }
         ```
+        * I used this link to gather information about [server and socket](https://www.tutorialspoint.com/java/java_networking.htm#:~:text=A%20client%20program%20creates%20a,that%20socket%20to%20a%20server.&text=Socket%20class%20represents%20a%20socket,and%20establish%20connections%20with%20them. "click this to understand it better")
