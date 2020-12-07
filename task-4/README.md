@@ -10,6 +10,7 @@
         * __delete for all__ - this option lets you delete only messages you sent for both participants. 
     * the search option uses following fields __email address or username__. 
     * It also allows you to see whether your friend is online or not, if not then it shows the last date and time they were active.
+    ___
 * ### __TECHNICAL INFO__
     * It uses __JAVA__ as a front end and __MySql__ as backend.
     * It communicates using _JAVA networking server and socket_.
@@ -134,16 +135,19 @@
         }
         ```
         * I used this link to gather information about [server and socket](https://www.tutorialspoint.com/java/java_networking.htm#:~:text=A%20client%20program%20creates%20a,that%20socket%20to%20a%20server.&text=Socket%20class%20represents%20a%20socket,and%20establish%20connections%20with%20them. "click this to understand it better")
+       ___
     * for tables in mysql it has several tables:-
 
         ![](res/4-1.jpg)
         * structure of __id__ table which is the only manually created table is
-        * rest tables are either created when we sign-up or make friends. Their structure are as follows.
+        
+        ![t](res/4-2.jpg)
+        * rest tables are either created when we sign-up or make friends. Their structure are as follows, here username is for u_name field in program which is your username.
             * \<username> - this table is made on signup and contains list of our friends: -
-            ![t](res/4-2.jpg)
+            ![t](res/4-3.jpg)
             * \<username>_profile - this table is made on signup and contains our about me and profile picture.
-            ![e](res/4-3.jpg)
+            ![e](res/4-4.jpg)
             * \<username>_req - this table is made on signup and contains friend requests.
-            ![q](res/4-4.jpg)
+            ![q](res/4-5.jpg)
             * msg\_\<username1>_\<username2> - this table is made on making friends and contains all our messages.
-            ![r](res/4-5.jpg)
+            ![r](res/4-6.jpg)
