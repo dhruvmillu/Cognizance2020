@@ -132,3 +132,4 @@
             else{System.out.println(e+"kk");}
         }
         ```  
+        * I used this link to gather information about [server and socket](https://www.tutorialspoint.com/java/java_networking.htm#:~:text=A%20client%20program%20creates%20a,that%20socket%20to%20a%20server.&text=Socket%20class%20represents%20a%20socket,and%20establish%20connections%20with%20them. "click this to understand it better")
