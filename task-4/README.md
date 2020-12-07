@@ -134,3 +134,16 @@
         }
         ```
         * I used this link to gather information about [server and socket](https://www.tutorialspoint.com/java/java_networking.htm#:~:text=A%20client%20program%20creates%20a,that%20socket%20to%20a%20server.&text=Socket%20class%20represents%20a%20socket,and%20establish%20connections%20with%20them. "click this to understand it better")
+    * for tables in mysql it has several tables:-
+
+        ![](res/4-1.jpg)
+        * structure of __id__ table which is the only manually created table is
+        * rest tables are either created when we sign-up or make friends. Their structure are as follows.
+            * \<username> - this table is made on signup and contains list of our friends: -
+            ![t](res/4-2.jpg)
+            * \<username>_profile - this table is made on signup and contains our about me and profile picture.
+            ![e](res/4-3.jpg)
+            * \<username>_req - this table is made on signup and contains friend requests.
+            ![q](res/4-4.jpg)
+            * msg\_\<username1>_\<username2> - this table is made on making friends and contains all our messages.
+            ![r](res/4-5.jpg)
