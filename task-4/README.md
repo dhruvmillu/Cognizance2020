@@ -44,7 +44,7 @@
                 catch(Exception o){System.out.print(o+"pp");
                 }
                 ```
-            * for client: -
+         * for client: -
                 ```JAVA
                 import java.io.DataInputStream;
                 import java.io.DataOutputStream;
@@ -65,3 +65,70 @@
                  }
                 catch(Exception e){
                     System.out.println(e);}
+                ```
+                * but in this project it uses __mutiple try and catch statements__.
+        ```java
+        try {
+            s = new Socket("127.0.0.1",1200);
+            din=new DataInputStream(s.getInputStream());
+            dout=new DataOutputStream(s.getOutputStream());
+            String msgin="";
+        
+            while(!msgin.equals("exit")){
+                msgin=din.readUTF();
+                jTextArea1.append(id2+": "+msgin+"\n");
+            
+            }
+            }
+        catch(Exception e){
+
+            if(e.toString().equals("java.net.ConnectException: Connection refused: connect")){
+                String msgin="" ;
+                try{
+                    ss=new ServerSocket(i);
+                    s=ss.accept();
+                    System.out.println("server on");
+                    din=new DataInputStream(s.getInputStream());
+                    dout=new DataOutputStream(s.getOutputStream());
+
+                    while(true){
+                        msgin=din.readUTF();
+                        jTextArea1.append(id2+": "+msgin+"\n");
+
+                        if(msgin.equals("exit")){
+                            ss.close();
+                        }
+                
+                     }
+
+                }
+                catch(Exception o){
+                    System.out.print(o+"pp");
+                }
+            }
+            else if(e.toString().equals("java.net.SocketException: Connection reset")){
+                String msgin="" ;
+                try{
+                    ss=new ServerSocket(1200);
+                    s=ss.accept();
+                    System.out.println("server on");
+                    din=new DataInputStream(s.getInputStream());
+                    dout=new DataOutputStream(s.getOutputStream());
+
+                    while(true){
+                        msgin=din.readUTF();
+                        jTextArea1.append(id2+": "+msgin+"\n");
+               
+                         if(msgin.equals("exit")){
+                            s.close();
+                         } 
+      
+                    }
+
+                }
+                catch(Exception o){System.out.print(o +"ll");
+                }
+            } 
+            else{System.out.println(e+"kk");}
+        }
+        ```
