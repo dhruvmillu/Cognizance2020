@@ -47,4 +47,4 @@
                 set value of num = num/10
             End
         Return Integer count
-    * ## ![flow chart](task-6/res/task-6.jpg)
+    * ## ![flow chart](res/task-6.jpg)
