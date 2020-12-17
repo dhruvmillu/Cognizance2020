@@ -1,5 +1,6 @@
 # Print a special alphabet output in java 
 the following program make the the following pattern
+      
       for 4 input
       a
       a b
